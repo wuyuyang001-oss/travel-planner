@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旅行规划站 · 目的地导航门户</title>
+<meta name="description" content="旅游行程规划门户，精选目的地路线，支持静态部署与持续扩展。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<nav id="site-nav"></nav>
+
+<main class="page-main">
+
+  <section class="mb-4">
+    <h2 class="section-title">🌍 已发布的目的地</h2>
+    <p class="section-desc">选择一个目的地查看完整行程规划 —— 含每日时间轴、POI 分类、地图导航与住宿推荐。</p>
+  </section>
+
+  <div class="dest-grid">
+
+    <!-- ====== 新马泰 ====== -->
+    <a href="destinations/singapore-malaysia-thailand.html" class="dest-card">
+      <div class="dest-card-image" style="background: linear-gradient(135deg, #ec4899 0%, #f97316 30%, #8b5cf6 60%, #3b82f6 100%);">
+        🌏
+      </div>
+      <div class="dest-card-body">
+        <div class="dest-card-title">新马泰 · 中秋国庆之旅</div>
+        <div class="dest-card-subtitle">新加坡 → 吉隆坡 → 曼谷 ｜ 7天6晚全景巡游</div>
+        <div class="dest-card-tags">
+          <span class="dest-tag tag-blue">景点 ×15</span>
+          <span class="dest-tag tag-amber">美食 ×10</span>
+          <span class="dest-tag tag-purple">文化 ×7</span>
+          <span class="dest-tag tag-pink">购物 ×5</span>
+        </div>
+        <div class="dest-card-meta">
+          <span>📅 9月30日 — 10月6日</span>
+          <span>💰 ¥12,800 / 人</span>
+          <span>📍 35 个打卡点</span>
+        </div>
+        <span class="dest-card-action">查看完整行程 →</span>
+      </div>
+    </a>
+
+    <!-- ====== 占位卡片：未来可扩展 ====== -->
+    <div class="dest-card" style="opacity: 0.5; cursor: default; pointer-events: none;">
+      <div class="dest-card-image" style="background: linear-gradient(135deg, #e5e7eb, #d1d5db); display: flex; align-items: center; justify-content: center; font-size: 48px;">
+        ✨
+      </div>
+      <div class="dest-card-body">
+        <div class="dest-card-title" style="color: #9ca3af;">更多目的地即将上线</div>
+        <div class="dest-card-subtitle">日本关西 · 欧洲多国 · 云南深度 · 西北大环线…</div>
+        <div class="dest-card-tags">
+          <span class="dest-tag tag-green">即将发布</span>
+          <span class="dest-tag" style="background:#f3f4f6;color:#9ca3af;">敬请期待</span>
+        </div>
+        <div style="margin-top: 14px; padding: 8px 16px; background: #f3f4f6; border-radius: 8px; font-size: 12px; color: #9ca3af; text-align: center;">
+          新增目的地只需添加 HTML 文件并在导航中注册
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====== 平台统计 ====== -->
+  <div class="info-stats">
+    <div class="info-stat">
+      <div class="info-stat-num">1</div>
+      <div class="info-stat-label">已发布目的地</div>
+    </div>
+    <div class="info-stat">
+      <div class="info-stat-num">3</div>
+      <div class="info-stat-label">覆盖国家</div>
+    </div>
+    <div class="info-stat">
+      <div class="info-stat-num">35</div>
+      <div class="info-stat-label">总 POI 打卡点</div>
+    </div>
+    <div class="info-stat">
+      <div class="info-stat-num">4</div>
+      <div class="info-stat-label">POI 分类维度</div>
+    </div>
+  </div>
+
+  <!-- ====== 如何扩展 ====== -->
+  <section style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 28px 32px; margin-top: 20px;">
+    <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">📦 如何新增目的地</h3>
+    <div style="font-size: 13px; color: var(--color-text-secondary); line-height: 1.8;">
+      <p>1. 在 <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;">destinations/</code> 目录下创建新的 HTML 文件</p>
+      <p>2. 在 <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;">js/main.js</code> 的 <code>PAGES</code> 数组中注册导航项</p>
+      <p>3. 在本首页目的地的卡片网格中添加新卡片</p>
+      <p>4. 更新 <code>sitemap.html</code> 中的站点列表</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

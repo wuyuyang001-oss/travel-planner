@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>站点地图 — 旅行规划站</title>
+<meta name="description" content="旅行规划站完整站点地图，列出所有已发布的旅游目的地页面。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .sitemap-section { margin-bottom: 36px; }
+  .sitemap-section h3 {
+    font-size: 15px; font-weight: 700; color: var(--color-text);
+    margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .sitemap-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+  }
+</style>
+</head>
+<body data-page="sitemap">
+
+<nav id="site-nav"></nav>
+
+<main class="page-main">
+
+  <section style="margin-bottom: 32px;">
+    <h2 class="section-title">🗺️ 站点地图</h2>
+    <p class="section-desc">所有已发布的页面一览 —— 纯静态架构，无需服务器即可完整浏览。</p>
+  </section>
+
+  <!-- ====== 顶层页面 ====== -->
+  <section class="sitemap-section">
+    <h3>📄 顶层页面</h3>
+    <div class="sitemap-grid">
+      <div class="sitemap-item">
+        <div>
+          <div class="sitemap-item-title">🏠 首页 — 目的地导航门户</div>
+          <div class="sitemap-item-path">index.html</div>
+        </div>
+        <a href="index.html" class="sitemap-item-link">前往 →</a>
+      </div>
+      <div class="sitemap-item">
+        <div>
+          <div class="sitemap-item-title">🗺️ 站点地图</div>
+          <div class="sitemap-item-path">sitemap.html</div>
+        </div>
+        <a href="sitemap.html" class="sitemap-item-link">当前页</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 目的地页面 ====== -->
+  <section class="sitemap-section">
+    <h3>🌍 目的地行程规划</h3>
+    <div class="sitemap-grid">
+      <div class="sitemap-item">
+        <div>
+          <div class="sitemap-item-title">🇸🇬🇲🇾🇹🇭 新马泰 · 中秋国庆之旅</div>
+          <div class="sitemap-item-path">destinations/singapore-malaysia-thailand.html</div>
+          <div style="font-size:11px;color:var(--color-text-muted);margin-top:2px;">
+            新加坡 → 吉隆坡 → 曼谷 · 7天6晚 · 35 POI · ¥12,800/人
+          </div>
+        </div>
+        <a href="destinations/singapore-malaysia-thailand.html" class="sitemap-item-link">前往 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 资源文件 ====== -->
+  <section class="sitemap-section">
+    <h3>📦 静态资源</h3>
+    <div class="sitemap-grid">
+      <div class="sitemap-item">
+        <div>
+          <div class="sitemap-item-title">🎨 全局样式表</div>
+          <div class="sitemap-item-path">css/style.css</div>
+        </div>
+        <span style="font-size:11px;color:var(--color-text-muted);">共享</span>
+      </div>
+      <div class="sitemap-item">
+        <div>
+          <div class="sitemap-item-title">⚡ 共享脚本</div>
+          <div class="sitemap-item-path">js/main.js</div>
+        </div>
+        <span style="font-size:11px;color:var(--color-text-muted);">导航/组件</span>
+      </div>
+      <div class="sitemap-item">
+        <div>
+          <div class="sitemap-item-title">📋 部署说明</div>
+          <div class="sitemap-item-path">DEPLOY.md</div>
+        </div>
+        <span style="font-size:11px;color:var(--color-text-muted);">文档</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 扩展指南 ====== -->
+  <section style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 28px 32px; margin-top: 20px;">
+    <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px;">📦 如何新增页面并在此注册</h3>
+    <div style="font-size: 13px; color: var(--color-text-secondary); line-height: 1.9;">
+      <p><strong>1.</strong> 在 <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;">destinations/</code> 目录下创建新的行程 HTML 文件</p>
+      <p><strong>2.</strong> 在 <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;">js/main.js</code> 的 <code>PAGES</code> 数组中添加新的导航项</p>
+      <p><strong>3.</strong> 在 <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;">index.html</code> 的导航卡片网格中添加新卡片</p>
+      <p><strong>4.</strong> 在本 <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;">sitemap.html</code> 页面的对应区域添加列表项</p>
+      <p><strong>5.</strong> 所有资源使用相对路径引用，无需修改服务器配置</p>
+    </div>
+    <div style="margin-top: 12px; padding: 10px 14px; background: #eff6ff; border-radius: 8px; font-size: 12px; color: #1e40af;">
+      💡 提示：新增目的地时，可以参考 <code style="background:#dbeafe;padding:1px 4px;border-radius:3px;">destinations/singapore-malaysia-thailand.html</code> 的模板结构。
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
